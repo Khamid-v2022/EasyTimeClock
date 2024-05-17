@@ -50,9 +50,6 @@
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <button type="button" class="btn btn-secondary btn-lg" id="cancel_btn">
-                            Cancel
-                        </button>
                         <button type="submit" class="btn btn-primary btn-lg ms-3" id="submit_btn">
                             Submit
                             <i class="fa fa-spinner fa-spin ms-1 d-none"></i>

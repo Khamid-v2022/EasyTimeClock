@@ -25,6 +25,8 @@ $(function () {
 		defaultDate: currentTime,
     });
 
+    
+
     $("#name").on("keyup", function(){
         $("#error_msg").addClass("d-none");
     })
