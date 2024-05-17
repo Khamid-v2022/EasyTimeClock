@@ -3,15 +3,26 @@ $(function () {
     const flatpickrDate = document.querySelector('#date'),
         flatpickrTime = document.querySelector('#time');
 
+    var now = new Date();
+    var currentHour = now.getHours();
+    var currentMinute = now.getMinutes();
+
+    // Format the current time as "HH:MM"
+    var currentTime = currentHour.toString().padStart(2, '0') + ':' + currentMinute.toString().padStart(2, '0');
+
     // Date picker
     flatpickrDate.flatpickr({
-        monthSelectorType: 'static'
+        monthSelectorType: 'static',
+        dateFormat: "Y-m-d",
+		defaultDate: 'today',
     });
   
     // Time picker
     flatpickrTime.flatpickr({
         enableTime: true,
-        noCalendar: true
+        noCalendar: true,
+        dateFormat: "H:i",
+		defaultDate: currentTime,
     });
 
     $("#name").on("keyup", function(){
